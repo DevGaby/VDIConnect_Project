@@ -193,3 +193,5 @@ C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Projet2\VDIConnect_Project\VDICon
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Projet2\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.Migrations.InitialCreate.resources
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Projet2\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.csproj.GenerateResource.cache
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Projet2\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.Migrations.Start.resources
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Projet2\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\bin\Swashbuckle.Core.dll
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Projet2\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\bin\WebActivatorEx.dll
