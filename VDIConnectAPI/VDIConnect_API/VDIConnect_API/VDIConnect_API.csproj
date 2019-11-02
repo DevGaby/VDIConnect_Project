@@ -55,6 +55,9 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -117,6 +120,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -135,6 +141,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
     <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
@@ -177,9 +184,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201911020942226_Start.cs" />
     <Compile Include="Migrations\201911020942226_Start.Designer.cs">
       <DependentUpon>201911020942226_Start.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201911011802291_InitialCreate.cs" />
+    <Compile Include="Migrations\201911011802291_InitialCreate.Designer.cs">
+      <DependentUpon>201911011802291_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911011857057_Start.cs" />
+    <Compile Include="Migrations\201911011857057_Start.Designer.cs">
+      <DependentUpon>201911011857057_Start.cs</DependentUpon>
+>>>>>>> 95bf0f4e67f1b5f7c0af299eb45fa3b3e174cebb
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Commentary.cs" />
@@ -278,8 +295,16 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201911020942226_Start.resx">
       <DependentUpon>201911020942226_Start.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201911011802291_InitialCreate.resx">
+      <DependentUpon>201911011802291_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911011857057_Start.resx">
+      <DependentUpon>201911011857057_Start.cs</DependentUpon>
+>>>>>>> 95bf0f4e67f1b5f7c0af299eb45fa3b3e174cebb
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
