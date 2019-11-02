@@ -19,7 +19,7 @@ namespace VDIConnect_API.Tests.Controllers
 
             // Affirmer
             Assert.IsNotNull(result);
-            Assert.AreEqual("Home Page", result.ViewBag.Title);
+            Assert.AreEqual("VDIConnect API", result.ViewBag.Title);
         }
     }
 }

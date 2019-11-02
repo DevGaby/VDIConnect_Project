@@ -22,7 +22,7 @@ namespace VDIConnect_API.Controllers.Tests
 
             Assert.AreEqual(true, result);
         }
-
+        [TestMethod()]
         public void LoginTestKo()
         {
             string mail = "mdupont@gmail.com";
@@ -65,29 +65,27 @@ namespace VDIConnect_API.Controllers.Tests
 
             Assert.AreEqual(true, result);
         }
-
+        [TestMethod()]
         public void RegisterTestKo()
         {
             string firstname = "Dupont";
             string lastname = "Maurice";
             string mail = "mdupont@gmail.com";
-            string password = "momo123";
             Person person = new Person();
 
             person.Firstname = firstname;
             person.Lastname = lastname;
             person.Mail = mail;
-            person.Password = password;
             bool result = Login(person);
 
-            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, result);
         }
 
         public bool Register(Person person)
         {
             bool msg;
-            if (person.Firstname == "user" && person.Lastname == "test"
-                && person.Mail == "usertest@gmail.com" && person.Password == "123ABC")
+            if (person.Firstname != null && person.Lastname != null
+                && person.Mail != null && person.Password != null)
                 msg = true;
             else
                 msg = false;
@@ -107,6 +105,7 @@ namespace VDIConnect_API.Controllers.Tests
             Assert.AreEqual("123ABC", result.Password);
         }
 
+        [TestMethod()]
         public void EditUserPwdTestKo()
         {
             string password = "trucmuche";
@@ -115,7 +114,7 @@ namespace VDIConnect_API.Controllers.Tests
             person.Password = password;
             Person result = EditUserPwdTest(person);
 
-            Assert.AreEqual("", result.Password);
+            Assert.AreEqual(null, result.Password);
         }
 
         public Person EditUserPwdTest(Person person)
