@@ -17,7 +17,6 @@ namespace VDIConnect_API.Models
         [Required] public string Lastname { get; set; }
         [Required] public string Firstname { get; set; }
         [Required] public string Mail { get; set; }
-        [Required] public string Password { get; set; }
         public string Phone { get; set; }
         public string City { get; set; }
         public int RoleId { get; set; }

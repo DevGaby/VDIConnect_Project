@@ -25,9 +25,6 @@ namespace VDIConnect_API.Controllers
                 using (VDIConnectContext db = new VDIConnectContext())
                 {
                     List<Person> persons = db.Person.Where(x => x.AccountArchive == false).Include(x => x.Role).ToList();
-                    if (persons == null)
-                        return NotFound(); ;
-
                     return Ok(persons);
                 }
             }
@@ -52,8 +49,9 @@ namespace VDIConnect_API.Controllers
                 {
                     Person person = db.Person.Where(x => x.Id == idPerson).Include(x => x.Role).FirstOrDefault();
                     if (person == null)
+                    {
                         return NotFound();
-
+                    }
                     return Ok(person);
                 }
                 catch (Exception exp)
@@ -77,9 +75,6 @@ namespace VDIConnect_API.Controllers
                 using (VDIConnectContext db = new VDIConnectContext())
                 {
                     List<Person> persons = db.Person.Where(x => x.RoleId == roleId && x.AccountArchive == false).Include(x => x.Role).ToList();
-                    if (persons == null)
-                        return NotFound(); ;
-
                     return Ok(persons);
                 }
             }
@@ -89,31 +84,6 @@ namespace VDIConnect_API.Controllers
             }
         }
 
-        /// <summary>
-        /// Methode qui cherche les utilisateurs possédant le mail passé en parametre
-        /// </summary>
-        /// <param name="mail"></param>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("api/person/GetPersonByMail/{mail}", Name = "GetPersonByMail")]
-        public IHttpActionResult GetPersonByMail(string mail)
-        {
-            using (VDIConnectContext db = new VDIConnectContext())
-            {
-                try
-                {
-                    Person person = db.Person.Where(x => x.Mail == mail).FirstOrDefault();
-                    if (person == null)
-                        return NotFound(); ;
-
-                    return Ok(person);
-                }
-                catch (Exception exp)
-                {
-                    return BadRequest(string.Format("Erreur dans la méthode GetPersonByMail:\n Message : {0};\n  InnerException : {1};\n Stacktrace : {2}\n", exp.Message, exp.InnerException, exp.StackTrace));
-                }
-            }
-        }
 
         /// <summary>
         /// Méthode qui créee un nouvelle utilisateur
@@ -202,8 +172,7 @@ namespace VDIConnect_API.Controllers
                     Person archivedPerson = db.Person.Find(idPerson);
                     if (archivedPerson == null)
                         return NotFound();
-
-                   // List<Event> eventOrganiser = db.Event.Where(x => x. != null && x.IdHote == personId || x.IdVDI == personId).ToList();
+                    // List<Event> eventOrganiser = db.Event.Where(x => x.DateEnd != null && x.IdHote == personId || x.IdVDI == personId).ToList();
 
                     archivedPerson.AccountArchive = true;
                     db.Entry(archivedPerson).State = EntityState.Modified;

@@ -10,10 +10,7 @@ namespace VDIConnect_API.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-<<<<<<< HEAD
-=======
             ContextKey = "VDIConnect_API.DAL.VDIConnectContext";
->>>>>>> 95bf0f4e67f1b5f7c0af299eb45fa3b3e174cebb
         }
 
         protected override void Seed(VDIConnect_API.DAL.VDIConnectContext context)
