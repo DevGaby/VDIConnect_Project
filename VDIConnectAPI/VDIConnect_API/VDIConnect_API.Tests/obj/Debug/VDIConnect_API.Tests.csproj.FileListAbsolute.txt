@@ -99,7 +99,6 @@ C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnec
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\System.Web.Optimization.xml
-C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\EntityFramework.xml
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\Antlr3.Runtime.pdb
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\fr\System.Net.Http.Formatting.resources.dll
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\fr\System.Web.Helpers.resources.dll
@@ -121,3 +120,5 @@ C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnec
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\BCrypt.Net.xml
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\WebActivatorEx.dll
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\Swashbuckle.Core.dll
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\EntityFramework.SqlServer.xml

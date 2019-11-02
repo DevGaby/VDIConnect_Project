@@ -84,38 +84,6 @@ namespace VDIConnect_API.Controllers
             }
         }
 
-
-        /// <summary>
-        /// Méthode qui créee un nouvelle utilisateur
-        /// </summary>
-        /// <param name="person"></param>
-        /// <returns> L'utilisateur crée </returns>
-        [HttpPost]
-        [Route("api/person/PostPerson/", Name = "PostPerson")]
-        public IHttpActionResult PostPerson([FromBody]Person person)
-        {
-            try
-            {
-                using (VDIConnectContext db = new VDIConnectContext())
-                {
-                    person.AccountArchive = false;
-                    person.Lastname = person.Lastname.ToUpper();
-
-                    /// Formatage du Prenom
-                    string firstname = person.Firstname;
-
-                    db.Person.Add(person);
-                    db.SaveChanges();
-                    return Ok(person);
-                }
-            }
-            catch (Exception exp)
-            {
-                return BadRequest(string.Format("Erreur dans la méthode PostPerson: Message : {0};  InnerException : {1}; Stacktrace : {2}", exp.Message, exp.InnerException, exp.StackTrace));
-            }
-        }
-
-
         /// <summary>
         /// Modifie les informations de l'utilisateur possédant l'Id passée en parametre
         /// </summary>

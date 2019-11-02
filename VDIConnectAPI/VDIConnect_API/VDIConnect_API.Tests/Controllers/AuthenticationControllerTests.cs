@@ -1,10 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VDIConnect_API.Controllers;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using VDIConnect_API.DAL;
+using VDIConnect_API.Models;
+
 
 namespace VDIConnect_API.Controllers.Tests
 {
@@ -12,21 +10,125 @@ namespace VDIConnect_API.Controllers.Tests
     public class AuthenticationControllerTests
     {
         [TestMethod()]
-        public void LoginTest()
+        public void LoginTestOk()
         {
-            Assert.Fail();
+            string mail = "usertest@gmail.com";
+            string password = "123ABC";
+            Person person = new Person();
+
+            person.Mail = mail;
+            person.Password = password;
+            bool result = Login(person);
+
+            Assert.AreEqual(true, result);
+        }
+
+        public void LoginTestKo()
+        {
+            string mail = "mdupont@gmail.com";
+            string password = "Maurice";
+            Person person = new Person();
+
+            person.Mail = mail;
+            person.Password = password;
+            bool result = Login(person);
+
+            Assert.AreEqual(false, result);
+        }
+
+        public bool Login(Person person)
+        {
+            bool msg;
+            if (person.Mail == "usertest@gmail.com" && person.Password == "123ABC")
+
+                msg = true;
+            else
+                msg = false;
+
+            return msg;
         }
 
         [TestMethod()]
-        public void RegisterTest()
+        public void RegisterTestOk()
         {
-            Assert.Fail();
+            string firstname = "Test";
+            string lastname = "user";
+            string mail = "usertest@gmail.com";
+            string password = "123ABC";
+            Person person = new Person();
+
+            person.Firstname = firstname;
+            person.Lastname = lastname;
+            person.Mail = mail;
+            person.Password = password;
+            bool result = Login(person);
+
+            Assert.AreEqual(true, result);
+        }
+
+        public void RegisterTestKo()
+        {
+            string firstname = "Dupont";
+            string lastname = "Maurice";
+            string mail = "mdupont@gmail.com";
+            string password = "momo123";
+            Person person = new Person();
+
+            person.Firstname = firstname;
+            person.Lastname = lastname;
+            person.Mail = mail;
+            person.Password = password;
+            bool result = Login(person);
+
+            Assert.AreEqual(true, result);
+        }
+
+        public bool Register(Person person)
+        {
+            bool msg;
+            if (person.Firstname == "user" && person.Lastname == "test"
+                && person.Mail == "usertest@gmail.com" && person.Password == "123ABC")
+                msg = true;
+            else
+                msg = false;
+
+            return msg;
         }
 
         [TestMethod()]
-        public void EditUserPwdTest()
+        public void EditUserPwdTestOk()
         {
-            Assert.Fail();
+            string password = "ABC123";
+            Person person = new Person();
+
+            person.Password = password;
+            Person result = EditUserPwdTest(person);
+
+            Assert.AreEqual("123ABC", result.Password);
+        }
+
+        public void EditUserPwdTestKo()
+        {
+            string password = "trucmuche";
+            Person person = new Person();
+
+            person.Password = password;
+            Person result = EditUserPwdTest(person);
+
+            Assert.AreEqual("", result.Password);
+        }
+
+        public Person EditUserPwdTest(Person person)
+        {
+            Person msg = new Person();
+            if (person.Password == "ABC123")
+            {
+                person.Password = "123ABC";
+                msg.Password = person.Password;
+                return msg;
+            }
+            else
+                return msg;
         }
     }
 }

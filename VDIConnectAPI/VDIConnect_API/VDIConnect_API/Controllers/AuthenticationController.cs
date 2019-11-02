@@ -41,9 +41,13 @@ namespace VDIConnect_API.Controllers
         /// </summary>
         /// <param name="userC"></param>
         /// <returns></returns>
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("api/auth/Login")]
         public IHttpActionResult Login([FromBody]AuthUser userC)
         {
             using (VDIConnectContext db = new VDIConnectContext())
+            {
                 try
                 {
                     Person user = db.Person.Where(x => x.Mail == userC.mail).FirstOrDefault();
@@ -67,6 +71,7 @@ namespace VDIConnect_API.Controllers
                 {
                     return BadRequest(string.Format("Erreur dans la méthode Login:\n Message : {0};\n  InnerException : {1};\n Stacktrace : {2}\n", exp.Message, exp.InnerException, exp.StackTrace));
                 }
+            }
         }
 
         /// <summary>
@@ -81,16 +86,33 @@ namespace VDIConnect_API.Controllers
         {
             using (VDIConnectContext db = new VDIConnectContext())
             {
-                Person user = db.Person.Where(x => x.Mail == newUser.Mail).FirstOrDefault();
-                if (user != null)
-                    return BadRequest("User existing");
+                try
+                {
+                    Person user = db.Person.Where(x => x.Mail == newUser.Mail).FirstOrDefault();
+                    if (user != null)
+                        return BadRequest("User existing");
 
-                newUser.RoleId = db.Role.Where(x => x.Label == "user").Select(x => x.Id).FirstOrDefault();
-                newUser.Password = BCrypt.Net.BCrypt.HashPassword(newUser.Password);
-                db.Person.Add(newUser);
-                db.SaveChanges();
+                    //Formatage du Prenom
+                    Int32 fisrstnameLength = newUser.Firstname.Length - 1;
+                    string firstname = newUser.Firstname;
+                    string firstLetter = firstname.Substring(0, 1);
+                    string lastLetter = firstname.Substring(1, fisrstnameLength);
 
-                return Ok(newUser);
+                    newUser.Firstname = firstLetter + lastLetter;
+                    newUser.AccountArchive = false;
+                    newUser.Lastname = newUser.Lastname.ToUpper();
+                    newUser.RoleId = db.Role.Where(x => x.Label == "User").Select(x => x.Id).FirstOrDefault();
+                    newUser.Password = BCrypt.Net.BCrypt.HashPassword(newUser.Password);
+
+                    db.Person.Add(newUser);
+                    db.SaveChanges();
+                    return Ok(newUser);
+                }
+                catch (Exception exp)
+                {
+                    return BadRequest(string.Format("Erreur dans la méthode Register: Message : {0};  InnerException : {1}; Stacktrace : {2}", exp.Message, exp.InnerException, exp.StackTrace));
+                }
+
             }
         }
 
@@ -101,7 +123,7 @@ namespace VDIConnect_API.Controllers
         }
 
         /// <summary>
-        /// Verification de mdp d'un user par son id
+        /// Modification MDP
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="user"></param>
@@ -113,24 +135,32 @@ namespace VDIConnect_API.Controllers
         {
             using (VDIConnectContext db = new VDIConnectContext())
             {
-                var oldUser = db.Person.Find(userId);
-                string pwd = BCrypt.Net.BCrypt.HashPassword(user.newPwd);
+                try
+                {
+                    var oldUser = db.Person.Find(userId);
+                    string pwd = BCrypt.Net.BCrypt.HashPassword(user.newPwd);
 
-                if (oldUser == null)
-                    return NotFound();
+                    if (oldUser == null)
+                        return NotFound();
 
-                bool verifyPwd = BCrypt.Net.BCrypt.Verify(user.currentPwd, oldUser.Password);
+                    bool verifyPwd = BCrypt.Net.BCrypt.Verify(user.currentPwd, oldUser.Password);
 
-                if (!verifyPwd)
-                    return BadRequest("Error password");
+                    if (!verifyPwd)
+                        return BadRequest("Error password");
 
-                else if (oldUser.Password == pwd)
-                    return BadRequest("Old password is same of new");
+                    else if (oldUser.Password == pwd)
+                        return BadRequest("Old password is same of new");
 
-                oldUser.Password = pwd;
-                db.Entry(oldUser).State = EntityState.Modified;
-                db.SaveChanges();
-                return Ok(oldUser);
+                    oldUser.Password = pwd;
+                    db.Entry(oldUser).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return Ok(oldUser);
+                }
+                catch (Exception exp)
+                {
+                    return BadRequest(string.Format("Erreur dans la méthode EditUserPwd: Message : {0};  InnerException : {1}; Stacktrace : {2}", exp.Message, exp.InnerException, exp.StackTrace));
+                }
+
             }
         }
 
