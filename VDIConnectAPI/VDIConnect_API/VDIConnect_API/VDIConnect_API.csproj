@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -168,6 +171,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\CommentaryController.cs" />
     <Compile Include="Controllers\EnterpriseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -180,13 +184,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911011802291_InitialCreate.cs" />
-    <Compile Include="Migrations\201911011802291_InitialCreate.Designer.cs">
-      <DependentUpon>201911011802291_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911011857057_Start.cs" />
-    <Compile Include="Migrations\201911011857057_Start.Designer.cs">
-      <DependentUpon>201911011857057_Start.cs</DependentUpon>
+    <Compile Include="Migrations\201911021249226_FirstMigration.cs" />
+    <Compile Include="Migrations\201911021249226_FirstMigration.Designer.cs">
+      <DependentUpon>201911021249226_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Commentary.cs" />
@@ -209,6 +209,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="LICENSE.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -284,11 +285,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911011802291_InitialCreate.resx">
-      <DependentUpon>201911011802291_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911011857057_Start.resx">
-      <DependentUpon>201911011857057_Start.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911021249226_FirstMigration.resx">
+      <DependentUpon>201911021249226_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

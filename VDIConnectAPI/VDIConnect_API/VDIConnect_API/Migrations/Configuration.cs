@@ -4,13 +4,13 @@ namespace VDIConnect_API.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using VDIConnect_API.DAL;
 
     internal sealed class Configuration : DbMigrationsConfiguration<VDIConnect_API.DAL.VDIConnectContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "VDIConnect_API.DAL.VDIConnectContext";
         }
 
         protected override void Seed(VDIConnect_API.DAL.VDIConnectContext context)

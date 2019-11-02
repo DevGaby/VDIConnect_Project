@@ -119,3 +119,5 @@ C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnec
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\BCrypt.Net.dll
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\BCrypt.Net.pdb
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\BCrypt.Net.xml
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API.Tests\bin\Debug\Swashbuckle.Core.dll
