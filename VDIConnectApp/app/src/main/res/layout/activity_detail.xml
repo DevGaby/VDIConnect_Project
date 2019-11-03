@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detailActivity">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/pseudo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/avatar"
+        android:layout_alignTop="@+id/avatar"
+        android:textStyle="bold"
+        android:text="Pseudo hôte" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_alignLeft="@+id/pseudo"
+        android:layout_below="@+id/pseudo"
+        android:text="Titre de l'atelier" />
+
+    <ImageView
+        android:id="@+id/illustrationevent"
+        android:src="@drawable/eventpicture"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"/>
+
+    <ImageButton
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/yes"/>
+
+    <ImageButton
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/no"/>
+
+    <TextView
+        android:id="@+id/nbSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="10dp"
+        android:text="20 places / 5 disponibles"/>
+
+    <TextView
+        android:id="@+id/cityEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="10dp"
+        android:text="Lieu : Clamart"/>
+
+    <TextView
+        android:id="@+id/labelDescription"
+        android:layout_width="500dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="310dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorFirstApp"
+        android:text="Description de l'event"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="10dp"
+        android:text="Description détaillée"/>
+
+</RelativeLayout>
