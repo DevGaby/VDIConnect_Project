@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -64,14 +65,14 @@ public class EventAdapter extends ArrayAdapter<Event> {
         viewHolder.description.setText(event.getDescription());
         viewHolder.participed.setOnClickListener(openSignIn);
 
-       /* viewHolder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Ouvrir l'activite detail de l'event
-                Intent otherActivity = new Intent(getContext(), SignInActivity.class);
-
-            }
-        });*/
+//        viewHolder.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                int duration = Toast.LENGTH_SHORT;
+//                Toast.makeText(getApplicationContext(),"En cours de developpement", duration).show();
+//
+//
+//    });
 
          /*public void onClick(View view) {
          Intent otherActivity = new Intent(getApplicationContext(),SignInActivity.class);
