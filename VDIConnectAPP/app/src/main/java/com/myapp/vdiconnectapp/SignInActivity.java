@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignInActivity extends AppCompatActivity {
-    private TextView signUp;
+    private Button signUp;
     private Button submit;
 
     @Override
@@ -18,8 +18,8 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        this.signUp = (TextView)findViewById(R.id.connect);
-        this.submit = (Button) findViewById(R.id.submit) ;
+        this.submit = (Button) findViewById(R.id.submit);
+        this.signUp = (Button) findViewById(R.id.signUp) ;
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +30,7 @@ public class SignInActivity extends AppCompatActivity {
                 //appel a l'API
             }
         });
+
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +39,6 @@ public class SignInActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
+
 }

@@ -79,14 +79,15 @@
                 android:textSize="16dp"
                 android:text="Pas encore de compte?"/>
 
-            <TextView
-                android:id="@+id/connect"
+            <Button
+                android:id="@+id/signUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:padding="10dp"
                 android:textColor="#ffffff"
                 android:textSize="16dp"
+                android:background="@color/colorFirstApp"
                 android:text="Crée le içi"/>
 
         </LinearLayout>
