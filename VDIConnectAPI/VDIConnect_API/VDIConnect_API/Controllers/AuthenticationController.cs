@@ -26,7 +26,7 @@ namespace VDIConnect_API.Controllers
             public string role;
         }
 
-        public class LoggedUser
+        public class LoggedUser //dto
         {
             public int id;
             public string firstname;

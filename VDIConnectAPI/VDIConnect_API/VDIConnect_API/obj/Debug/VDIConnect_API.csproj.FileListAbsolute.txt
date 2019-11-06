@@ -297,3 +297,5 @@ C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnec
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.Migrations.FirstMigration.resources
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.csproj.GenerateResource.cache
 C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.csprojAssemblyReference.cache
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPPs\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.dll
+C:\Users\sgabriel\Documents\MCDNT-Cours\Projet\Repo\VDIConnect_Project\VDIConnectAPPs\VDIConnect_Project\VDIConnectAPI\VDIConnect_API\VDIConnect_API\obj\Debug\VDIConnect_API.pdb
